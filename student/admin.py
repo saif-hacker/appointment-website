@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import ContactModel
-
+from .models import Sign_up
 
 @admin.register(ContactModel)
 class ContactAdmin(admin.ModelAdmin):
@@ -13,4 +13,11 @@ class ContactAdmin(admin.ModelAdmin):
     
 
 # Register your models here.
-# admin.site.register(ContactModel)
+@admin.register(Sign_up)
+class signupAdmin(admin.ModelAdmin):
+    list_display = [
+        'username',
+        'email',
+    ]
+    
+

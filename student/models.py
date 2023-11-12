@@ -16,10 +16,17 @@ class ContactModel(models.Model):
         ordering = ['fname']
         
 class Sign_up(models.Model):
-    name = models.CharField(max_length=50)
+    username = models.CharField(max_length=50)
     email = models.EmailField(max_length=255)
     password = models.CharField(max_length=255)
     cpassword = models.CharField(max_length=255)
+    
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        ordering = ['username']
+    
     
     
    
