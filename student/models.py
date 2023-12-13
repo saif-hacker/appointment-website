@@ -16,8 +16,8 @@ class ContactModel(models.Model):
         ordering = ['fname']
         
 class Sign_up(models.Model):
-    username = models.CharField(max_length=50)
-    email = models.EmailField(max_length=255)
+    username = models.EmailField(max_length=50)
+    # email = models.EmailField(max_length=255)
     password = models.CharField(max_length=255)
     cpassword = models.CharField(max_length=255)
     
